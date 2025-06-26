@@ -1,0 +1,206 @@
+[
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='get_ticker_data', description='Get comprehensive report for ticker: overview, news, metrics, performance, dates, analyst recommendations, and upgrades/downgrades.', args_schema={'properties': {'ticker': {'title': 'Ticker', 'type': 'string'}}, 'required': ['ticker'], 'title': 'get_ticker_dataArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x1041ae840>)",
+    "name": "get_ticker_data"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='get_price_history', description='Get historical price data digest for specified period. \\n    Usually get at least 3 months, 6 months or more.\\n    It includes OCHLCV samples, Technical Indicators (by ta-lib) , Risk Metrics, and other quantitative analysis.\\n    ', args_schema={'properties': {'ticker': {'title': 'Ticker', 'type': 'string'}, 'period': {'default': '6mo', 'enum': ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'], 'title': 'Period', 'type': 'string'}}, 'required': ['ticker'], 'title': 'get_price_historyArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x104247420>)",
+    "name": "get_price_history"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='get_financial_statements', description='Get financial statements. Types: income, balance, cash. Frequency: quarterly, annual.', args_schema={'properties': {'ticker': {'title': 'Ticker', 'type': 'string'}, 'statement_type': {'default': 'income', 'enum': ['income', 'balance', 'cash'], 'title': 'Statement Type', 'type': 'string'}, 'frequency': {'default': 'quarterly', 'enum': ['quarterly', 'annual'], 'title': 'Frequency', 'type': 'string'}}, 'required': ['ticker'], 'title': 'get_financial_statementsArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x104247380>)",
+    "name": "get_financial_statements"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='get_earnings_history', description='Get earnings history with estimates and surprises.', args_schema={'properties': {'ticker': {'title': 'Ticker', 'type': 'string'}}, 'required': ['ticker'], 'title': 'get_earnings_historyArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x104247ba0>)",
+    "name": "get_earnings_history"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='get_insider_trades', description='Get recent insider trading activity.', args_schema={'properties': {'ticker': {'title': 'Ticker', 'type': 'string'}}, 'required': ['ticker'], 'title': 'get_insider_tradesArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x104247a60>)",
+    "name": "get_insider_trades"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='get_ticker_news_tool', description='For getting yahoo financial news of a ticker. Useful for getting latest news, especially for doing deep research.', args_schema={'properties': {'ticker': {'title': 'Ticker', 'type': 'string'}}, 'required': ['ticker'], 'title': 'get_ticker_news_toolArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x1042472e0>)",
+    "name": "get_ticker_news_tool"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='super_option_tool', description='\\n    Analyzes and summarizes option data for a given ticker.\\n\\n    This function retrieves option indicators and Greeks for the specified ticker,\\n    generates a digest summarizing key metrics, and formats a table of key option\\n    data including last trade date, strike, option type, open interest, volume,\\n    and implied volatility.\\n\\n    Args:\\n        ticker: Stock ticker symbol.\\n\\n    ', args_schema={'properties': {'ticker': {'title': 'Ticker', 'type': 'string'}}, 'required': ['ticker'], 'title': 'super_option_toolArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x104247d80>)",
+    "name": "super_option_tool"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='get_holdings_summary', description='\\n    Analyze 13F 13D/G to get institutional holdings data from the last 6 months and return a formatted digest.\\n    ', args_schema={'properties': {'ticker': {'title': 'Ticker', 'type': 'string'}}, 'required': ['ticker'], 'title': 'get_holdings_summaryArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x104247560>)",
+    "name": "get_holdings_summary"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='get_overall_sentiment_tool', description='\\n    Get comprehensive market sentiment indicators including:\\n    - CNN Fear & Greed Index (score and rating)\\n    - Market RSI (Relative Strength Index)\\n    - VIX (Volatility Index)\\n\\n    Returns:\\n        str: Formatted string containing all three indicators with their current values\\n    ', args_schema={'properties': {}, 'title': 'get_overall_sentiment_toolArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x104290040>)",
+    "name": "get_overall_sentiment_tool"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='get_historical_fng_tool', description='\\n    Get historical CNN Fear & Greed Index data for a specified number of days.\\n\\n    Parameters:\\n        days (int): Number of days of historical data to retrieve (limited by the API).\\n\\n    Returns:\\n        str: Historical Fear & Greed Index values for the specified period.\\n    ', args_schema={'properties': {'days': {'title': 'Days', 'type': 'integer'}}, 'required': ['days'], 'title': 'get_historical_fng_toolArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x1042902c0>)",
+    "name": "get_historical_fng_tool"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='analyze_fng_trend', description='\\n    Analyze trends in CNN Fear & Greed Index over specified days.\\n\\n    Parameters:\\n        days (int): Number of days to analyze (limited by available data).\\n\\n    Returns:\\n        str: A string containing the analysis results, including latest value,\\n             average value, trend direction, and number of data points analyzed.\\n    ', args_schema={'properties': {'days': {'title': 'Days', 'type': 'integer'}}, 'required': ['days'], 'title': 'analyze_fng_trendArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x104290360>)",
+    "name": "analyze_fng_trend"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='calculate', description='Calculate the result of a mathematical expression. Support python math syntax and numpy.\\n        > calculate(\"2 * 3 + 4\")\\n        {\\'result\\': 10}\\n        > calculate(\"sin(pi/2)\")\\n        {\\'result\\': 1.0}\\n        > calculate(\"sqrt(16)\")\\n        {\\'result\\': 4.0}\\n        > calculate(\"np.mean([1, 2, 3])\")\\n        {\\'result\\': 2.0}\\n    ', args_schema={'properties': {'expression': {'title': 'Expression', 'type': 'string'}}, 'required': ['expression'], 'title': 'calculateArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x1042900e0>)",
+    "name": "calculate"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='get_current_time', description='Get the current time in ISO 8601 format.', args_schema={'properties': {}, 'title': 'get_current_timeArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x104290180>)",
+    "name": "get_current_time"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='get_fred_series', description='Get a FRED series by its ID. However the data is not always the latest, so use with caution!!!', args_schema={'properties': {'series_id': {'title': 'series_id', 'type': 'string'}}, 'required': ['series_id'], 'title': 'get_fred_seriesArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x104290400>)",
+    "name": "get_fred_series"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='search_fred_series', description='Search for the most popular FRED series by keyword. Useful for finding key data by name. Like GDP, CPI, etc. However the data is not always the latest.  ', args_schema={'properties': {'query': {'title': 'query', 'type': 'string'}}, 'required': ['query'], 'title': 'search_fred_seriesArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x1042904a0>)",
+    "name": "search_fred_series"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='cnbc_news_feed', description='Get the latest breaking world news from CNBC, BBC, and SCMP. Useful to have an overview for the day. Include the Fed rate prediction from Fed watch. ', args_schema={'properties': {}, 'title': 'cnbc_news_feedArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x104290540>)",
+    "name": "cnbc_news_feed"
+  },
+  {
+    "lc": 1,
+    "type": "not_implemented",
+    "id": [
+      "langchain_core",
+      "tools",
+      "structured",
+      "StructuredTool"
+    ],
+    "repr": "StructuredTool(name='social_media_feed', description='Get most discussed stocks and investments opinions from social media. Useful to know what investors are talking about. ', args_schema={'properties': {}, 'title': 'social_media_feedArguments', 'type': 'object'}, response_format='content_and_artifact', coroutine=<function convert_mcp_tool_to_langchain_tool.<locals>.call_tool at 0x1042905e0>)",
+    "name": "social_media_feed"
+  }
+]
